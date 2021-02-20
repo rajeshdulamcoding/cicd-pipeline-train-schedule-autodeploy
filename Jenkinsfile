@@ -1,7 +1,3 @@
-node {
-    checkout scm 
-    /* .. snip .. */
-}
 pipeline {
     agent any
     environment {
@@ -9,7 +5,6 @@ pipeline {
         DOCKER_IMAGE_NAME = "bhavukm/train-schedule"
     }
     stages {
-        
         stage('Build') {
             steps {
                 echo 'Running build automation'
